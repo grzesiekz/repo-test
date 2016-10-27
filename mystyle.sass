@@ -1,0 +1,607 @@
+$fonts: "Raleway", sans-serif
+$back-gray: #313234
+$back-blue: #00C7EB
+$pure-white: #FFFFFF
+$container-width: 1200px
+
+@mixin zeroes
+	margin: 0
+	padding: 0
+
+@mixin mytrans($kind, $time)
+	-webkit-transition: $kind $time
+	-moz-transition: $kind $time
+	-o-transition: $kind $time
+	transition: $kind $time
+
+*
+	box-sizing: border-box
+
+body
+	margin: 0
+	font-family: $fonts
+
+header
+	height: 70px
+	width: 100%
+	background-color: $back-gray
+
+.container
+	max-width: $container-width
+	margin: 0 auto
+	padding: 0
+	text-align: center
+
+.logo
+	float: left
+	padding: 10px 20px
+	@media(max-width: 767px)
+		float: none
+
+nav 
+	ul
+		float: right
+		@include zeroes
+		text-align: center
+		@media(max-width: 767px)
+			float: none
+			position: relative
+			background-color: rgba(0,0,0,0.4)
+
+	li
+		list-style-type: none
+		padding: 0
+		height: 24px
+		display: inline-block
+		@media(max-width: 767px)
+			display: inline
+
+	a
+		color: $pure-white
+		display: block
+		font-size: 16px
+		font-weight: 600
+		text-decoration: none
+		text-transform: uppercase
+		line-height: 70px
+		padding: 0 20px
+		&:hover
+			color: $back-blue
+		@media(min-width: 768px) and (max-width: 1199px) 
+			padding: 0 10px
+		@media(max-width: 767px)
+			font-size: 150%
+			text-align: left
+			line-height: 3em
+
+.hero
+	margin: 0 auto
+	height: 700px
+	background-image: url("http://gzf.kylos.pl/kodilla/header-11.jpg")
+	background-size: cover
+	background-position: 0 50%
+
+.slogan
+	max-width: 800px
+	width: 600px
+	background-color: rgba(0, 0, 0, 0.4)
+	float: right
+	margin-top: 200px
+	padding: 20px 20px 10px 40px
+	@media(min-width: 768px) and (max-width: 1199px) 
+		margin-top: 500px
+		width: 400px
+		text-align: right
+		padding-left: 0
+	@media(max-width: 767px)
+		margin-top: 549px
+		text-align: right	
+
+	p
+		font-size: 24px
+		text-transform: uppercase
+		color: $pure-white
+		line-height: 0.2em
+
+	h1
+		font-size: 32px
+		font-weight: bold
+		padding-left: 100px
+		letter-spacing: 2px
+		color: $pure-white
+		text-transform: uppercase
+
+[class*="col-"] 
+	float: left
+
+.col-1  
+	padding: 50px 50px
+	width: 33.33% 
+	text-align: center
+
+.col-full  
+	width: 100%
+	text-align: center
+
+
+.advantages 
+	p
+		font-size: 15px
+	
+	h1
+		font-size: 36px
+		text-transform: uppercase
+		color: $back-gray
+
+	h2
+		text-transform: uppercase
+		font-weight: 600
+		font-size: 18px
+		@media(max-width: 767px)
+			color: $back-blue
+
+	.fa
+		padding: 10px
+		font-size: 60px
+		color: $pure-white
+		border-radius: 10px
+		background-color: $back-gray
+		border: 1px solid $back-gray
+		&:hover
+			cursor: pointer
+			background-color: $pure-white
+			border: 1px solid $back-blue
+			color: $back-blue
+		&:hover +h2
+			color: $back-blue
+
+.icosearch
+	padding: 50px 0 50px 120px
+
+.icolaptop
+	padding: 50px 60px 50px 60px
+
+.icocogs
+	padding: 50px 120px 50px 0
+
+.featured
+	text-align: center
+	padding: 0 0 50px 0
+	@media(min-width: 768px) and (max-width: 1199px) 
+		padding: 10px 10% 20px 10%
+		background-color: rgba(2,2,2,0.2)
+	@media(max-width: 767px)
+		padding: 10px 10% 20px 10%
+		background-color: rgba(2,2,2,0.2)
+
+	h1
+		font-size: 36px
+		font-weight: 700
+		color: $back-gray
+		text-transform: uppercase
+
+.gallery
+	margin: 0 auto
+	text-align: center
+	padding: 0
+
+[class*="pic-"]
+	float: left
+	width: 20%
+	height: 360px
+	background-size: cover
+	@media(min-width: 768px) and (max-width: 1199px) 
+		height: 200px
+	@media(max-width: 767px)
+		position: relative
+		float: none
+		width: 100%
+		@include zeroes
+
+.pic-wide
+	width: 40%
+	height: 360px
+	background-image: url("http://gzf.kylos.pl/kodilla/gallery-1.jpg")
+	background-position: 0 50%
+	@media(min-width: 768px) and (max-width: 1199px) 
+		width: 40%
+		height: 200px
+	@media(max-width: 767px)
+		position: relative
+		float: none
+		width: 100%
+		@include zeroes
+
+.pic-2
+	background-image: url("http://gzf.kylos.pl/kodilla/gallery-2.jpg")
+
+.pic-3
+	background-image: url("http://gzf.kylos.pl/kodilla/gallery-3.jpg")
+
+.pic-4
+	background-image: url("http://gzf.kylos.pl/kodilla/gallery-4.jpg")
+
+.pic-5
+	background-image: url("http://gzf.kylos.pl/kodilla/gallery-5.jpg")
+
+.pic-6
+	background-image: url("http://gzf.kylos.pl/kodilla/gallery-6.jpg")
+
+.pic-7
+	background-image: url("http://gzf.kylos.pl/kodilla/gallery-7.jpg")
+
+.overlay
+	float: left
+	width: 100%
+	height: 100%
+	@media(max-width: 767px)
+		text-align: right
+		padding-right: 30px
+
+	.fa
+		margin-top: 160px
+		background-color: rgba(255,255,255,0.8)
+		font-size: 26px
+		color: rgba(49, 50, 52, 1)
+		border: 1px solid $back-gray
+		padding: 10px
+		border-radius: 10px
+		@media(min-width: 768px) and (max-width: 1199px)
+			margin-top: 80px
+		@media(max-width: 767px)
+			height: auto
+			margin: 270px 5px
+			font-size: 250%
+
+	.fa-laptop
+		margin: 0 0 0 20px
+		padding: 10px 10px
+
+	&:hover
+		cursor: pointer
+		width: 100%
+		height: 100%
+		background-color: rgba(2, 2, 2, 0.4)
+		@include mytrans(ease-in, 0.4s)
+		@media(max-width: 767px)
+			background-color: rgba(0,0,0,0)
+			transition: none
+
+.ov-wide
+	@extend .overlay
+
+[class*="pic-"]:not(:hover) .overlay, .pic-wide:not(:hover) .ov-wide  
+	display: none
+	@media(max-width: 767px)
+		display: block
+
+.col-3 
+	width: 33.33%
+	padding: 0
+
+.col-4
+	@extend .col-3
+	width: 66.66%
+
+.col-5
+	width: 25%
+	@media(min-width: 768px) and (max-width: 1199px)
+		width: 50%
+		@include zeroes
+	@media(max-width: 767px)
+		width: 100%
+		padding: 0 0 30px 0
+		margin: 0
+
+
+.team
+	.row-bottom
+		padding: 80px 0 60px 0
+		@media(max-width: 767px)
+			padding: 40px 0 0 0
+
+	h2
+		font-size: 20px
+		font-weight: 600
+		color: $back-gray
+
+.photo
+	height: 200px
+	width: 200px
+	border-radius: 100px
+
+.face-box
+	position: relative
+
+	.overbox
+		background-color: rgba(0,0,0,0.5)
+		border-radius: 100px
+		position: absolute
+		top: 0
+		left: 50px
+		color: $pure-white
+		width: 200px
+		height: 200px
+		opacity: 0
+		@media(min-width: 768px) and (max-width: 1199px)
+			display: none
+		@media(max-width: 767px)
+			display: none
+
+	.title
+		text-align: center
+		transform: translateY(75px)
+		font-weight: 600
+		font-size: 17px
+		letter-spacing: 1px
+		opacity: 0
+	&:hover .overbox
+		opacity: 1
+
+	&:hover .title
+		opacity : 1
+		@include(ease-in-out, 0.5s)
+
+.counters
+	text-align: center
+
+	.container
+		padding: 0 150px
+		@media(max-width: 767px)
+			padding: 0
+
+	.col-5
+		padding: 20px 30px
+		@media(max-width: 767px)
+			width: 50%
+			@include zeroes
+
+	h1
+		font-size: 56px
+		font-weight: 800
+		line-height: 0.1em
+		color: $back-gray
+
+	h3
+		font-size: 13px
+		font-weight: 600
+		letter-spacing: 1px
+		text-transform: uppercase
+		color: $back-blue
+		@media(max-width: 767px)
+			color: $pure-white
+
+	.chboard
+		@media(max-width: 767px)
+			background-color: rgba(0, 199, 232, 0.7)
+
+
+.tablet
+	background-color: rgba(0,0,0,0.4)
+	.col-4
+		padding: 70px 0 0
+
+	h1
+		padding: 0 0 0 30px
+		text-align: left
+		font-size: 32px
+		font-weight: 900
+		letter-spacing: 1px
+		text-transform: uppercase
+		color: $pure-white
+		@media(min-width: 768px) and (max-width: 1199px)
+			margin: 10px 0
+			padding: 0
+			text-align: center
+		@media(max-width: 767px)
+			margin: 5px 0
+			padding: 5px 20px
+			text-align: center
+
+	.text-left
+		width: 60%
+		padding: 0 0 0 30px
+		color: $pure-white
+		font-size: 15px
+		text-align: left
+		line-height: 1.25em
+		@media(min-width: 768px) and (max-width: 1199px)
+			width: 65%
+			padding-right: 10px
+		@media(max-width: 767px)
+			padding: 0 0 0 30px
+			width: 58%
+
+	.text-right
+		@extend .text-left
+		width: 35%
+		padding: 0 50px 0 20px
+		font-style: italic
+		@media(min-width: 768px) and (max-width: 1199px)
+			padding: 0 20px 5px 5px
+			margin: 0
+			width: 35%
+		@media(max-width: 767px)
+			padding: 0 20px 5px 5px
+			margin: 0
+			width: 38%
+
+	.container
+		@media(min-width: 768px) and (max-width: 1199px)
+			width: 100%
+			padding: 0
+			margin: 0 auto
+
+	.ipad-pic
+		@media(min-width: 768px) and (max-width: 1199px)
+			float: none
+			width: 100%
+			margin: 0
+		@media(max-width: 767px)
+			float: none
+			width: 100%
+
+	.wrapper
+		@media(min-width: 768px) and (max-width: 1199px)
+			width: 100%
+			padding: 0
+		@media(max-width: 767px)
+			width: 100%
+			padding: 0
+			float: none
+
+.tablet-frame
+	width: 300px
+	float: right
+	padding: 60px 20px 0 0
+	@media(min-width: 768px) and (max-width: 1199px)
+		float: none
+		padding: 20px 0 0 0
+	@media(max-width: 767px)
+		float: none
+		padding: 20px 0 0 0
+		margin: 0 auto
+
+.footer
+	background-color: rgba(0,0,0,0.7)
+
+	.row-main
+		padding: 40px 50px 70px 50px
+		@media(min-width: 768px) and (max-width: 1199px)
+			padding: 20px
+			width: 100%
+		@media(max-width: 767px)
+			padding: 0
+
+		.thirds
+			@media(max-width: 767px)
+				float: none
+				width: 100%
+				padding: 10px 20px 20px 20px
+
+	h1
+		padding: 0
+		font-size: 20px
+		font-weight: bold
+		color: $pure-white
+		text-transform: uppercase
+		text-align: left
+		letter-spacing: 1px
+
+	.about
+		font-size: 14px
+		text-align: left
+		color: $pure-white
+		padding: 0 20px 0 0
+		@media(min-width: 768px) and (max-width: 1199px)
+			width: 50%
+			padding: 0 10px
+
+		.lineplacing
+			position: relative
+			top: -30px
+			left: 90px			
+
+	.intouch
+		@extend .about
+		@media(min-width: 768px) and (max-width: 1199px)
+			width: 50%
+			padding: 0 10px
+		@media(max-width: 767px)
+			background-color: rgba(0,0,0,0.5)
+			padding-bottom: 30px
+			.va
+				width: 80%
+
+		.lineplacing
+			@extend .lineplacing
+			left: 170px
+
+		.two-line
+			margin-bottom: 0.5em
+
+		h2
+			font-size: 13px
+			font-weight: normal
+			@include zeroes
+
+		p
+			@extend h2
+
+	.social
+		@extend .about
+		@media(min-width: 768px) and (max-width: 1199px)
+			float: none
+			width: 100%
+			padding: 20px 0 0 10px
+			text-align: center
+
+		.lineplacing
+			@extend .lineplacing
+			left: 170px
+
+	.social-icons
+		@media(max-width: 767px)
+			text-align: center
+
+.line
+	background-color: $pure-white
+	height: 2px
+	width: 100px
+	position: absolute
+
+.bottom-line
+	text-align: center
+	font-size: 15px
+	color: $pure-white
+	padding: 5px 0
+	background: $back-gray
+
+.soc-ico
+	font-size: 25px
+	border-radius: 50%
+	color: $pure-white
+	background-color: $back-blue
+	padding: 10px
+	margin: 4px
+	&:hover
+		cursor: pointer
+		color: $back-blue
+		background-color: $pure-white
+		@include mytrans(ease-in-out, 0.2s)
+
+.fa-google-plus
+	padding: 10px 5px 10px 5px
+
+.fa-facebook
+	padding: 10px 15px 10px 15px
+
+.adv-1
+	@media(min-width: 768px) and (max-width: 1199px) 
+		padding: 20px 0 20px 50px
+		width: 50%
+
+.adv-2
+	@media(min-width: 768px) and (max-width: 1199px) 
+		padding: 20px 50px 20px 0
+		width: 50%
+
+.adv-3
+	@media(min-width: 768px) and (max-width: 1199px) 
+		float: none
+		width: 100%
+		padding: 0 225px
+		margin: 0
+
+[class*="adv-"]
+	@media(max-width: 767px)
+		float: none
+		padding: 10px 10%
+		width: 100%
+
+.clearfix
+	*zoom: 1
+	&:before, &:after
+		content: ""
+		display: table
+		clear: both
