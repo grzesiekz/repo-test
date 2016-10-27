@@ -7,7 +7,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Raleway:400,600,900" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="testcss.css">
 	</head>
-	<body>
+	<body class="animate">
 		<header>
 			<nav class="container clearfix">
 				<div class="menu-bkgd"></div>
@@ -31,21 +31,21 @@
 		<section class="advantages">
 			<div class="container clearfix">
 				<h1>Settlement stages</h1>
-				<div class="col-1 icosearch adv-1">
+				<div class="col-1 icosearch adv-1 animate">
 					<div class="col-full">
 						<i class="fa fa-laptop"></i>
 						<h2>Design stage</h2>
 					</div>
 					<p>Lorem ipsum dolor sit amet, szamet, dalej nie pamiętam, aczkolwiek nie ma to większego znaczenia, gdyż ten tekst zastąpimy jednym z cudownych pomysłów klienta.</p>
 				</div>
-				<div class="col-1 icolaptop adv-2">
+				<div class="col-1 icolaptop adv-2 animate">
 					<div class="col-full">
 						<i class="fa fa-cogs"></i>
 						<h2>Construction stage</h2>
 					</div>
 					<p>Lorem ipsum dolor sit amet, szamet, dalej nie pamiętam, aczkolwiek nie ma to większego znaczenia, gdyż ten tekst zastąpimy jednym z cudownych pomysłów klienta.</p>
 				</div>
-				<div class="col-1 icocogs adv-3">
+				<div class="col-1 icocogs adv-3 animate">
 					<div class="col-full">
 						<i class="fa fa-calendar-check-o"></i>
 						<h2>Final touches</h2>
@@ -117,28 +117,28 @@
 		<section class="team clearfix">
 			<div class="container">
 				<div class="row row-bottom clearfix">
-					<div class="col-5 face-box">
+					<div class="col-5 face-box animate">
 						<div class="overbox">
 							<h3 class="title">CEO</h3>
 						</div>
 						<img class="photo" src="http://gzf.kylos.pl/kodilla/portrait-1.jpg" alt="CEO">
 						<h2>Bill "The Boss"</h2>
 					</div>
-					<div class="col-5 face-box">
+					<div class="col-5 face-box animate">
 						<div class="overbox">
 							<h3 class="title">Main designer</h3>
 						</div>
 						<img class="photo" src="http://gzf.kylos.pl/kodilla/portrait-2.jpg" alt="architecy">
 						<h2>Frederick Quicksketcher</h2>
 					</div>
-					<div class="col-5 face-box">
+					<div class="col-5 face-box animate">
 						<div class="overbox">
 							<h3 class="title">Customer service</h3>
 						</div>
 						<img class="photo" src="http://gzf.kylos.pl/kodilla/portrait-4.jpg" alt="John">
 						<h2>Joan Eversmiling</h2>
 					</div>
-					<div class="col-5 face-box">
+					<div class="col-5 face-box animate">
 						<div class="overbox">
 							<h3 class="title">Construction leader</h3>
 						</div>
@@ -168,19 +168,19 @@
 		</section>
 		<section class="counters clearfix">
 			<div class="container clearfix">
-				<div class="col-5 chboard">
+				<div class="col-5 chboard animate">
 					<h1>455</h1>
 					<h3>happy settlements</h3>
 				</div>
-				<div class="col-5">
+				<div class="col-5 animate">
 					<h1>1991</h1>
 					<h3>since</h3>
 				</div>
-				<div class="col-5">
+				<div class="col-5 animate">
 					<h1>194</h1>
 					<h3>beautiful locations</h3>
 				</div>
-				<div class="col-5 chboard">
+				<div class="col-5 chboard animate">
 					<h1>608</h1>
 					<h3>designs</h3>
 				</div>
@@ -248,5 +248,10 @@
 		<section class="bottom-line">
 			<p>&copy; Grzegorz Żuchowicz 2016</p>
 		</section>
+		<script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
+        <script>
+            window.sr = ScrollReveal();
+            sr.reveal('.animate');
+   		</script>
 	</body>
 </html>
